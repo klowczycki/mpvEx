@@ -160,7 +160,7 @@ object M3UParser {
             var mediaUrl = line
             
             // If URL is relative and we have a base URL, make it absolute
-            if (!mediaUrl.startsWith("http://") && !mediaUrl.startsWith("https://") && baseUrl != null) {
+            if (!mediaUrl.startsWith("udp://") && !mediaUrl.startsWith("http://") && !mediaUrl.startsWith("https://") && baseUrl != null) {
               mediaUrl = resolveRelativeUrl(baseUrl, mediaUrl)
             }
             
